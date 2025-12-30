@@ -3,6 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/calculator.umd.js",
+  "module": "./dist/calculator.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/calculator.es.js",
+      "require": "./dist/calculator.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
